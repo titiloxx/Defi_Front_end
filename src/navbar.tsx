@@ -5,14 +5,17 @@ import Identicon from 'react-identicons';
 
 
 interface NavProps{
-address:string
+address:string,
+availableTokens:number,
 }
 
-const Nav=({address}:NavProps)=>(
+const Nav=({address,availableTokens}:NavProps)=>(
     <>
      <Navbar bg="dark" variant="dark">
     <Container>
-    <Navbar.Brand href="#home">The Loxx Token</Navbar.Brand>
+    <Navbar.Brand href="#home">
+      The Loxx Token
+    </Navbar.Brand>
     <Navbar.Collapse className="justify-content-end">
       <Navbar.Text>
         {address}
